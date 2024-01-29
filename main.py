@@ -21,3 +21,5 @@ for row in multi_table:
     print("\n")
 
 print("############################################")
+
+#checking my auto pipeline
