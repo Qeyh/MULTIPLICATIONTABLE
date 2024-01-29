@@ -15,8 +15,8 @@ steps:
 - script: docker build -t multitabledary .
   displayName: 'Build Docker Image'
 
-- script: docker tag multitabledary winterzone2/MULTIPLICATIONTABLE:v1
+- script: docker tag multitabledary winterzone2/multiplicationtable:v1
   displayName: 'Tag Docker Image'
 
-- script: docker push winterzone2/MULTIPLICATIONTABLE:v1
+- script: docker push winterzone2/multiplicationtable:v1
   displayName: 'Push Docker Image'
