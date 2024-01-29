@@ -12,10 +12,10 @@ steps:
     echo 'RUN python main.py' >> Dockerfile
   displayName: 'Create Docker File'
 
-- script: docker build -t MULTITableDary .
+- script: docker build -t multitabledary .
   displayName: 'Build Docker Image'
 
-- script: docker tag MULTITableDary winterzone2/MULTIPLICATIONTABLE:v1
+- script: docker tag multitabledary winterzone2/MULTIPLICATIONTABLE:v1
   displayName: 'Tag Docker Image'
 
 - script: docker push winterzone2/MULTIPLICATIONTABLE:v1
