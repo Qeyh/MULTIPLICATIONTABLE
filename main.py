@@ -22,4 +22,4 @@ for row in multi_table:
 
 print("############################################")
 
-#checking my auto pipeline!
+#auto pipeline
