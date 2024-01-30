@@ -11,7 +11,7 @@ steps:
     echo 'FROM python:3.9-slim' >> Dockerfile
     echo 'COPY . /app' >> Dockerfile
     echo 'WORKDIR /app' >> Dockerfile
-    echo 'RUN python sidePrint.py' >> Dockerfile
+    echo 'RUN python sidePrint.py 5' >> Dockerfile
   displayName: 'Create Docker File'
 
 - script: docker build -t multitabledary .
