@@ -11,7 +11,7 @@ steps:
     echo 'FROM python:3.9-slim' >> Dockerfile
     echo 'COPY . /app' >> Dockerfile
     echo 'WORKDIR /app' >> Dockerfile
-    echo 'RUN python main.py' >> Dockerfile
+    echo 'RUN python sidePrint.py' >> Dockerfile
   displayName: 'Create Docker File'
 
 - script: docker build -t multitabledary .
@@ -25,8 +25,8 @@ steps:
     username: '$(dockerhub_username)'
     password: '$(dockerhub_password)'
 
-- script: docker tag multitabledary winterzone2/multiplicationtable:v1
+- script: docker tag multitabledary winterzone2/multiplicationtable:v2
   displayName: 'Tag Docker Image'
 
-- script: docker push winterzone2/multiplicationtable:v1
+- script: docker push winterzone2/multiplicationtable:v2
   displayName: 'Push Docker Image'
