@@ -1,3 +1,9 @@
+import sys
+
+if len(sys.argv) != 2:
+    print("Usage: python sidePrint.py <number>")
+    sys.exit(1)
+
 multi_table = []
 #pipeline test
 maxTable=11
@@ -12,7 +18,7 @@ for i in range(maxTable):
 #delete first row of only 0's to make it better looking
 del multi_table[0]
 
-num = input("Please enter a number: ")
+num = sys.argv[1]
 try:
     num = int(num)
     if num <= 0 or num > 10:
