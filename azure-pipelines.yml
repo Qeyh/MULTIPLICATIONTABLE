@@ -8,10 +8,10 @@ pool:
 
 steps:
 - script: |
-    echo 'FROM python:3.9-slim' >> Dockerfile
-    echo 'COPY . /app' >> Dockerfile
-    echo 'WORKDIR /app' >> Dockerfile
-    echo 'RUN python sidePrint.py 5' >> Dockerfile
+    echo 'FROM alpine:latest' >> Dockerfile
+    echo 'RUN apk --update add python3' >> Dockerfile
+    echo 'COPY . /usr/src/app' >> Dockerfile
+    echo 'CMD ["python3", "/usr/src/app/main.py"]' >> Dockerfile
   displayName: 'Create Docker File'
 
 - script: docker build -t multitabledary .
